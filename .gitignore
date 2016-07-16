@@ -1,0 +1,21 @@
+# remove all
+*
+
+# root files
+!.gitignore
+!.xinitrc
+!.Xresources
+!.vimrc
+!.bashrc
+!.wp.jpg
+
+# adding config
+!/.config/
+
+# i3
+!/.config/i3/
+!/.config/i3/config
+
+# tilda
+!/.config/tilda/
+!/.config/tilda/config_0

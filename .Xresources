@@ -1,0 +1,27 @@
+Xft.dpi: 168
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+#define bg_color            #2f343f
+#define inactive_bg_color   #2f343f
+#define text_color          #f3f4f5
+#define inactive_text_color #676E7D
+#define urgent_bg_color     #E53935
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+! Use extended color scheme
+rofi.color-enabled:	true
+! Color scheme
+rofi.color-normal:	bg_color,	text_color,	bg_color,	#5294e2,	#ffffff
+rofi.color-urgent:	bg_color,	#dc322f,	#f5f5f5,	#5294e2,	#dc322f
+rofi.color-active:	bg_color,	#c2cad0,	#f5f5f5,	#5294e2,	#c2cad0
+! Color scheme window
+rofi.color-window:	bg_color,	text_color
+! Separator style (none, dash, solid)
+rofi.separator-style:	solid
