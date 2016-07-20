@@ -19,6 +19,9 @@ bind '"\e[B": history-search-forward'
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
 PS1='[\u@\h \W]\$ '
 
 man() {

@@ -3,6 +3,7 @@
 
 # root files
 !.gitignore
+!.gitconfig
 !.xinitrc
 !.Xresources
 !.vimrc
