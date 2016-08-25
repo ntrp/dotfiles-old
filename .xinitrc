@@ -8,12 +8,13 @@ fi
 export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 
 #xrandr --fbmm 346x194
-#xrandr --dpi 168
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
 xrandr --dpi 192
 xrdb -merge .Xresources
 setxkbmap                 #xdotool bug
 
-compton -bcCGf --shadow-exclude 'class_g = "tilda"'
+compton -b
 tilda &
 nm-applet &
 pasystray &
@@ -21,6 +22,6 @@ parcellite &
 cbatticon -i symbolic -u 1 &
 
 skype &
-google-chrome-stable &
+google-chrome &
 
 exec i3

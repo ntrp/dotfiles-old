@@ -22,6 +22,7 @@ font pango: DejaVu Sans Mono 8
 
 hide_edge_borders both
 focus_follows_mouse no
+focus_on_window_activation focus
 #workspace_auto_back_and_forth yes
 force_display_urgency_hint 500 ms
 
@@ -41,6 +42,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+F4 kill
 
+bindsym $mod+F3 exec layout_selector
+
 # start dmenu (a program launcher)
 #bindsym $mod+F2 exec dmenu_run
 bindsym $mod+F2 exec rofi -show run -bw 0 -eh 2 -padding 50 -lines 5 -font "Dejavu Sans Mono 16"
@@ -49,7 +52,7 @@ bindsym $mod+F2 exec rofi -show run -bw 0 -eh 2 -padding 50 -lines 5 -font "Deja
 # installed.
 # bindsym $mod+f2 exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+l exec slock
+bindsym $mod+l exec sslock
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -96,7 +99,7 @@ set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6:"
-set $ws7 "7:"
+set $ws7 "7:🎮"
 set $ws8 "8:"
 set $ws9 "9:"
 set $ws0 "10:?"
@@ -153,7 +156,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
-bindsym $mod+$alt+0 exec --no-startup-id VirtualBox --comment "MSEdge - Win10TH2" --startvm "0ddf2640-8cb9-4461-9a38-455e6bf0e8fd"
+bindsym XF86Search exec xdg-open https://www.google.com
+
+bindsym $mod+$alt+9 exec --no-startup-id VirtualBox --comment "MSEdge - Win10TH2" --startvm "0ddf2640-8cb9-4461-9a38-455e6bf0e8fd"
+bindsym $mod+$alt+0 exec --no-startup-id VirtualBox --comment "Win10" --startvm "d4a8ff76-3be9-4b7c-a53e-8766a97e1c17"
+#bindsym $mod+$alt+0 exec --no-startup-id startx /home/ntrp/.xinitrc-win -- :1 -xf86config xorg-win.conf vt8 
 bindsym $mod+$alt+c exec --no-startup-id google-chrome
 bindsym $mod+$alt+f exec --no-startup-id firefox
 bindsym $mod+$alt+x exec --no-startup-id nautilus
@@ -186,11 +193,16 @@ bindsym $mod+less mode "{😏}"
 assign [class="Nautilus"] $ws2
 assign [class="VirtualBox"] $ws8
 assign [class="Skype"] $ws9
+assign [class="jetbrains-idea"] $ws4
+assign [class="Steam"] $ws7
 
 for_window [class="Skype"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [class="Steam"] floating enable
 
-no_focus [class="Skype"]
+for_window [class="VirtualBox"] fullscreen enable
+
+no_focus [title="ivan.ntrp - Skype™"]
 
 ############################
 
@@ -241,7 +253,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 bar {
     status_command i3blocks
-    tray_output eDP1
+    tray_output eDP-1
     tray_padding 0
     strip_workspace_numbers yes
     colors {

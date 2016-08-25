@@ -18,10 +18,10 @@ Xft.rgba: rgb
 ! Use extended color scheme
 rofi.color-enabled:	true
 ! Color scheme
-rofi.color-normal:	bg_color,	text_color,	bg_color,	#5294e2,	#ffffff
-rofi.color-urgent:	bg_color,	#dc322f,	#f5f5f5,	#5294e2,	#dc322f
-rofi.color-active:	bg_color,	#c2cad0,	#f5f5f5,	#5294e2,	#c2cad0
+!rofi.color-normal:	bg_color,	text_color,	bg_color,	#5294e2,	#ffffff
+!rofi.color-urgent:	bg_color,	#dc322f,	#f5f5f5,	#5294e2,	#dc322f
+!rofi.color-active:	bg_color,	#c2cad0,	#f5f5f5,	#5294e2,	#c2cad0
 ! Color scheme window
-rofi.color-window:	bg_color,	text_color
+!rofi.color-window:	bg_color,	text_color
 ! Separator style (none, dash, solid)
-rofi.separator-style:	solid
+!rofi.separator-style:	solid
