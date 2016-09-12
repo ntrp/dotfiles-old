@@ -8,6 +8,8 @@
 export ANDROID_HOME="/home/ntrp/.android/sdk"
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/current:$NPM_PACKAGES/bin:$PATH"
 
+#export STEAM_RUNTIME=0
+
 export HISTCONTROL=ignoredups
 
 shopt -s autocd
