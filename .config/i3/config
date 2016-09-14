@@ -199,6 +199,7 @@ assign [class="Steam"] $ws7
 for_window [class="Skype"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="Lxappearance"] floating enable
 
 for_window [class="VirtualBox"] fullscreen enable
 
