@@ -18,6 +18,10 @@ shopt -s checkwinsize
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+alias nvidia-perf="optirun nvidia-settings -c :8 -a [gpu:0]/GpuPowerMizerMode=1"
+alias nvidia-settings="optirun nvidia-settings -c :8"
+alias primusrun="vblank_mode=0 primusrun"
+
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 

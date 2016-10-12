@@ -52,7 +52,7 @@ bindsym $mod+F2 exec rofi -show run -bw 0 -eh 2 -padding 50 -lines 5 -font "Deja
 # installed.
 # bindsym $mod+f2 exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+l exec sslock
+bindsym $mod+l exec slock
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -200,6 +200,7 @@ for_window [class="Skype"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [class="Psensor"] floating enable
 
 for_window [class="VirtualBox"] fullscreen enable
 
