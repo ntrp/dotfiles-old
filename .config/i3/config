@@ -193,6 +193,7 @@ bindsym $mod+less mode "{😏}"
 assign [class="Nautilus"] $ws2
 assign [class="VirtualBox"] $ws8
 assign [class="Skype"] $ws9
+assign [class="Franz"] $ws9
 assign [class="jetbrains-idea"] $ws4
 assign [class="Steam"] $ws7
 
